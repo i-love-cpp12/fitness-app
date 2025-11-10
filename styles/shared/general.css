@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../media/font/Roboto/Roboto-Bold.ttf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../media/font/Roboto/Roboto-Medium.ttf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../media/font/Roboto/Roboto-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../media/font/Roboto/Roboto-Light.ttf');
+    font-weight: 200;
+}
+:root
+{
+    /* color pallete */
+    --accent-color: hsl(134, 50%, 58%);
+    --text-color-normal: hsl(0, 0%, 18%);
+    --text-color-accented: hsl(0, 2%, 10%);
+    --balanced-color: hsla(0, 0%, 50%, 0.882);
+    --background-color-normal: hsl(0, 17%, 91%);
+    --background-color-accented: hsl(0, 23%, 94%);
+}
+body.dark
+{
+    --accent-color: #43cb92;
+    --text-color-normal: #9A9A9C;
+    --text-color-accented: #e6e5e7e1;
+    --balanced-color: hsla(0, 0%, 17%, 0.882);
+    --background-color-normal: #101014;
+    --background-color-accented: #191921;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    min-height: 100dvh;
+
+    background-color: var(--background-color-normal);
+    color: var(--text-color-normal);
+
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 400;
+}

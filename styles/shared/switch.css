@@ -1,0 +1,52 @@
+.switch
+{
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    padding: 5%;
+    aspect-ratio: 2 / 1;
+    border-radius: 100vh;
+    border: 1px solid var(--balanced-color);
+
+    background-color: var(--background-color-normal);
+    cursor: pointer;
+}
+.switch::after
+{
+    content: '';
+
+    display: block;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 100vh;
+
+    background-color: var(--background-color-accented);
+
+    /* transition: transform 100ms linear; */
+}
+.switch input
+{
+    display: none;
+}
+@keyframes jump-right
+{
+    0%   { transform: translateX(0) scale(1); }
+    50%  { transform: translateX(calc(180% - 50%)) scale(1.4); }
+    100% { transform: translateX(calc(180% - 50%)) scale(1); }
+}
+@keyframes jump-left
+{
+    0% { transform: translateX(calc(180% - 50%)) scale(1); }
+    50%  { transform: translateX(calc(180% - 50%)) scale(1.4); }
+    100%   { transform: translateX(0) scale(1); }
+}
+.switch:has(input:checked)::after
+{
+    animation: jump-right 300ms linear forwards;
+}
+.switch:not(:has(input:checked))::after
+{
+    animation: jump-left 300ms linear forwards;
+}
+

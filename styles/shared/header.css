@@ -1,0 +1,81 @@
+.header
+{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--balanced-color);
+    padding: 25px;
+}
+.header > .welcome
+{
+    font-size: 3em;
+    color: var(--text-color-accented);
+}
+.header > .options
+{
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 45px;
+}
+.header > .options > div
+{
+    display: flex;
+    gap: 10px;
+    height: 100%;
+}
+.header > .options > .normal-options
+{
+    padding-right: 20px;
+    border-right: 1px solid var(--balanced-color);
+}
+.header > .options > .normal-options > div
+{
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+
+    background-color: var(--background-color-accented);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: background-color, transform 200ms ease-in-out;
+}
+.header > .options > .normal-options > div:hover
+{
+    background-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+.header > .options > .normal-options > div > img
+{
+    height: 70%;
+}
+.header > .options > .theme-mode
+{
+    padding-left: 20px;
+    height: 100%;
+    position: relative;
+    transition: transform 200ms ease-in-out;
+}
+.header > .options > .theme-mode:hover
+{
+    transform: translateY(-5px);
+}
+.header > .options > .theme-mode img
+{
+    display: block;
+    position: absolute;
+    height: 60%;
+    top: 20%;
+    margin-left: 4px;
+    z-index: 100;
+}
+.header > .options > .theme-mode img.light-mode
+{
+    margin-left: 0;
+    right: 9px;
+}

@@ -1,0 +1,125 @@
+.navbar
+{
+    border-right: 1px solid var(--balanced-color);
+    padding: 13px;
+    height: 100%;
+}
+@keyframes slide-profile-highlight
+{
+    0%
+    {
+        background-position-x: 120%;
+    }
+    100%
+    {
+        background-position-x: -20%;
+    }
+
+}
+.navbar > .profile
+{
+    margin: 30px 0;
+    margin-bottom: 70px;
+    padding: 0 20px;
+    height: 60px;
+
+    border: 1px solid var(--balanced-color);
+    border-radius: 10px;
+
+    background: linear-gradient(
+        45deg,
+        var(--background-color-normal),
+        var(--background-color-normal),
+        var(--balanced-color),
+        var(--background-color-normal),
+        var(--background-color-normal));
+    background-repeat: no-repeat;
+    background-size: 300% 100%;
+    animation: slide-profile-highlight 4000ms ease-in-out infinite;
+    transition: all 200ms linear;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+
+    cursor: pointer;
+}
+.navbar > .profile:hover
+{
+    background: linear-gradient(
+        45deg,
+        var(--background-color-accented),
+        var(--background-color-accented),
+        var(--balanced-color),
+        var(--background-color-accented),
+        var(--background-color-accented)
+    );
+    background-size: 300% 100%;
+    transform: scale(1.02);
+}
+.navbar > .profile div.name
+{
+    color: var(--text-color-accented);
+}
+.navbar > .profile div.nickname
+{
+    font-size: 0.8em;
+}
+.navbar > .profile div.image
+{
+    height: 65%;
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+    border: none;
+}
+.navbar > .profile div.image img
+{
+    height: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: contain;
+}
+.navbar > .menu > .name
+{
+    font-size: 1.05em;
+    text-transform: uppercase;
+    text-align: left;
+    border-bottom: 1px solid var(--balanced-color);
+    padding: 0 0 20px 15px;
+    margin-bottom: 14px;
+}
+.navbar > .menu > .content
+{
+    display: grid;
+    grid-auto-rows: 50px;
+    gap: 3px;
+}
+.navbar > .menu > .content > div
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 1.07em;
+
+    padding: 2px 15px;
+
+    background-color: var(--background-color-normal);
+    cursor: pointer;
+    transition: background-color 100ms linear;
+    transition: transform 100ms linear;
+
+    border-radius: 7px;
+}
+.navbar > .menu > .content > div:hover
+{
+    background-color: var(--background-color-accented);
+    transform: scale(1.03);
+}
+.navbar > .menu > .content > div > img
+{
+    height: 65%;
+}
