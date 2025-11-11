@@ -5,15 +5,6 @@
     border-bottom: 1px solid var(--balanced-color);
     padding: 25px;
 }
-@media (max-width: 1000px)
-{
-    .header
-    {
-        flex-direction: column;
-        padding: 15px;
-        gap: 10px;
-    }
-}
 .header > .welcome
 {
     font-size: clamp(2.2em, 4vw, 3.1em);
@@ -87,4 +78,13 @@
 {
     margin-left: 0;
     right: 9px;
+}
+@media (max-width: 1000px)
+{
+    .header
+    {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+    }
 }

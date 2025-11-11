@@ -35,6 +35,11 @@ body
     color: var(--text-color-accented);
     margin-right: 3px;
 }
+.container > .main > .body-stats-expanded
+{
+    
+}
+
 @media (max-width: 770px)
 {
     .container > .main > .body-stats > div
@@ -74,3 +79,4 @@ body
         grid-template-columns: 1fr;
     }
 } */
+
