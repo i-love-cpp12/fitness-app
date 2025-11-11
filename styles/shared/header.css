@@ -5,9 +5,18 @@
     border-bottom: 1px solid var(--balanced-color);
     padding: 25px;
 }
+@media (max-width: 1000px)
+{
+    .header
+    {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+    }
+}
 .header > .welcome
 {
-    font-size: 3em;
+    font-size: clamp(2.2em, 5vw, 3.1em);
     color: var(--text-color-accented);
 }
 .header > .options
@@ -16,7 +25,7 @@
     display: flex;
     justify-content: end;
     align-items: center;
-    height: 45px;
+    height: clamp(2.4em, 5vw, 3.2em);
 }
 .header > .options > div
 {

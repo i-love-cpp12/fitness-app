@@ -84,7 +84,7 @@
 }
 .navbar > .menu > .name
 {
-    font-size: 1.05em;
+    font-size: clamp(1em, 1vw, 1.05em);
     text-transform: uppercase;
     text-align: left;
     border-bottom: 1px solid var(--balanced-color);
@@ -103,7 +103,7 @@
     align-items: center;
     gap: 15px;
 
-    font-size: 1.07em;
+    font-size: clamp(1em, 1vw, 1.05em);
 
     padding: 2px 15px;
 
@@ -121,5 +121,5 @@
 }
 .navbar > .menu > .content > div > img
 {
-    height: 65%;
+    height: clamp(55%, 1.7vw, 70%);
 }
