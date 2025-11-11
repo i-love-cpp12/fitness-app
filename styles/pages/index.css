@@ -1,7 +1,7 @@
 body
 {
     display: grid;
-    grid-template-columns: clamp(230px, 20vw, 280px) 1fr;
+    grid-template-columns: clamp(210px, 20vw, 280px) 1fr;
 }
 .container > .main
 {
@@ -12,5 +12,65 @@ body
     display: flex;
     justify-content: end;
     align-items: center;
-    gap: clamp(5px, 4dvw, 100px);
-}  
+    gap: clamp(5px, 4vw, 100px);
+}
+.container > .main > .body-stats > div
+{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.container > .main > .body-stats > div > div
+{
+    text-align: right;
+}
+.container > .main > .body-stats > div > .name
+{
+    font-size: clamp(0.93em, 1vw, 1.05em);
+
+}
+.container > .main > .body-stats .value
+{
+    font-size: clamp(1.1em, 2vw, 1.4em);
+    color: var(--text-color-accented);
+    margin-right: 3px;
+}
+@media (max-width: 770px)
+{
+    .container > .main > .body-stats > div
+    {
+        gap: 5px;
+    }
+    .container > .main > .body-stats > div > div
+    {
+        text-align: center;
+    }
+}
+@media (max-width: 770px ) and (min-width: 670px)
+{
+    .container > .main > .body-stats
+    {
+        justify-content: center;
+    }
+}
+@media (max-width: 669px)
+{
+    .container > .main > .body-stats
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, clamp(40px, 1vw, 100px));
+    }
+}
+/* @media (max-width: 530px)
+{
+    .navbar
+    {
+        position: absolute;
+        left: -400px;
+    }
+    body
+    {
+        grid-template-columns: 1fr;
+    }
+} */
