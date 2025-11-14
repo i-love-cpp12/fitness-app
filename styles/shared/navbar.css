@@ -3,6 +3,17 @@
     border-right: 1px solid var(--balanced-color);
     padding: 13px;
     height: 100%;
+    transition: left 500ms ease-in-out;
+    background-color: var(--background-color-normal);
+}
+body.navbar-expanded .navbar
+{
+    left: 0;
+    z-index: 200;
+}
+body.navbar-expanded .navbar > .close-menu
+{
+    display: block;
 }
 @keyframes slide-profile-highlight
 {
@@ -15,6 +26,16 @@
         background-position-x: -20%;
     }
 
+}
+.navbar > .close-menu
+{
+    display: none;
+    height: 40px;
+    aspect-ratio: 1 / 1;
+}
+.navbar > .close-menu > img
+{
+    height: 100%;
 }
 .navbar > .profile
 {

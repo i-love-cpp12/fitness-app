@@ -29,7 +29,7 @@
     padding-right: 20px;
     border-right: 1px solid var(--balanced-color);
 }
-.header > .options > .normal-options > div
+.header > .options > .normal-options > div, .header > .options > .haburger-menu > div
 {
     height: 100%;
     aspect-ratio: 1 / 1;
@@ -45,12 +45,12 @@
 
     transition: background-color, transform 200ms ease-in-out;
 }
-.header > .options > .normal-options > div:hover
+.header > .options > .normal-options > div:hover, .header > .options > .haburger-menu > div:hover
 {
     background-color: var(--accent-color);
     transform: translateY(-5px);
 }
-.header > .options > .normal-options > div > img
+.header > .options > .normal-options > div > img, .header > .options > .haburger-menu > div > img
 {
     height: 70%;
 }
@@ -79,6 +79,13 @@
     margin-left: 0;
     right: 9px;
 }
+.header > .options > .haburger-menu
+{
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 1px solid var(--balanced-color);
+    display: none;
+}
 @media (max-width: 1000px)
 {
     .header
@@ -86,5 +93,12 @@
         flex-direction: column;
         padding: 15px;
         gap: 10px;
+    }
+}
+@media (max-width: 530px)
+{
+    .header > .options > .haburger-menu
+    {
+        display: block;
     }
 }
