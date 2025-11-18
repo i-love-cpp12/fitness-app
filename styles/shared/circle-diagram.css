@@ -1,0 +1,22 @@
+.circle-diagram > svg > circle:last-child
+{
+    stroke-width: 8px;
+    stroke: var(--accent-color);
+    stroke-linecap: round;
+    stroke-dasharray: calc(2 * 3.14159 * 46);
+    stroke-dashoffset: calc((2 * 3.14159 * 46) * 0.60);
+    fill: transparent;
+    display: block;
+    width: 100%;
+}
+.circle-diagram > svg > circle:first-child
+{
+    stroke-width: 8px;
+    stroke: var(--balanced-color);
+    stroke-linecap: round;
+    stroke-dasharray: calc(2 * 3.14159 * 46);
+    fill: transparent;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
