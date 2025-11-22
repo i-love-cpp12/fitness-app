@@ -2,6 +2,7 @@
 {
     height: 100%;
     aspect-ratio: 1 / 1;
+    background-color: rgba(0, 255, 255, 0.057);
 }
 .colories-burned .circle-diagram
 {
@@ -20,4 +21,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.colories-burned .circle-diagram > .numbers > .procent
+{
+    font-size: clamp(1.5em, 2.7vw, 3.3em);
+    font-weight: 600;
+    color: var(--text-color-accented)
+}
+.colories-burned .circle-diagram > .numbers > .burned-target
+{
+    font-size: clamp(0.7em, 1vw, 1.1em);
 }

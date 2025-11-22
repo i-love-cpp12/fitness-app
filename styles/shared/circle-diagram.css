@@ -1,13 +1,15 @@
 .circle-diagram > svg > circle:last-child
 {
-    stroke-width: 8px;
+    stroke-width: 6px;
     stroke: var(--accent-color);
     stroke-linecap: round;
     stroke-dasharray: calc(2 * 3.14159 * 46);
-    stroke-dashoffset: calc((2 * 3.14159 * 46) * 0.60);
+    stroke-dashoffset: calc((2 * 3.14159 * 46));
     fill: transparent;
     display: block;
     width: 100%;
+
+    transition: stroke-dashoffset 500ms ease-in-out;
 }
 .circle-diagram > svg > circle:first-child
 {
