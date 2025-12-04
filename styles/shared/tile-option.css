@@ -1,0 +1,46 @@
+.body-stats-expanded .options
+{
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+.body-stats-expanded .options > button
+{
+    background-color: transparent;
+    height: 2.9rem;
+    border: none;
+}
+.body-stats-expanded > div > .options > button > img
+{
+    height: 100%;
+    cursor: pointer;
+}
+.body-stats-expanded .options > button:active ~ .option-list
+{
+    display: block;
+}
+.body-stats-expanded .options > .option-list
+{
+    position: absolute;
+    top: 15px;
+    right: 45px;
+    background-color: rgba(0, 0, 0, 0.446);
+    border-radius: 5px;
+    display: none;
+}
+.body-stats-expanded .options > .option-list > div
+{
+    text-wrap: nowrap;
+    background-color: rgba(0, 0, 0, 0.662);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+.body-stats-expanded .options > .option-list > div:hover
+{
+    background-color: black;
+    transform: scale(1.02);
+}

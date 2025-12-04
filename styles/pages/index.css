@@ -64,12 +64,18 @@ body.navbar-expanded .container
     border: 1px solid var(--balanced-color);
     padding: clamp(5px, 5vw, 15px);
     border-radius: 10px;
+    position: relative;
 }
 .container > .main > .body-stats-expanded > div:nth-child(4)
 {
     grid-column: 1 / 2 span;
 }
-
+.temp
+{
+    height: 100%;
+    max-width: 100%;
+    background-color: aqua;
+}
 @media (max-width: 770px)
 {
     .container > .main > .body-stats > div
